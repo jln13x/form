@@ -1,6 +1,6 @@
 {
   "name": "@jlns/form",
-  "version": "0.0.2",
+  "version": "0.0.5",
   "license": "MIT",
   "type": "module",
   "types": "./dist/index.d.ts",
@@ -10,16 +10,19 @@
   },
   "exports": {
     "./zod": {
-      "types": "./dist/zod/index.d.ts",
-      "import": "./dist/zod/index.js"
+      "require": "./dist/zod/index.cjs",
+      "import": "./dist/zod/index.js",
+      "types": "./dist/zod/index.d.ts"
     },
     "./valibot": {
-      "types": "./dist/valibot/index.d.ts",
-      "import": "./dist/valibot/index.js"
+      "require": "./dist/valibot/index.cjs",
+      "import": "./dist/valibot/index.js",
+      "types": "./dist/valibot/index.d.ts"
     },
     "./yup": {
-      "types": "./dist/yup/index.d.ts",
-      "import": "./dist/yup/index.js"
+      "require": "./dist/yup/index.cjs",
+      "import": "./dist/yup/index.js",
+      "types": "./dist/yup/index.d.ts"
     },
     "./package.json": "./package.json"
   },

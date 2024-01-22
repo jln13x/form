@@ -1,3 +1,5 @@
+"use client";
+
 import { valibotResolver } from "@hookform/resolvers/valibot";
 import {
   type DeepPartialSkipArrayKey,
