@@ -1,9 +1,13 @@
 {
   "name": "@jlns/form",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "license": "MIT",
   "type": "module",
   "types": "./dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jln13x/form.git"
+  },
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
