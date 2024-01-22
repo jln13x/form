@@ -6,7 +6,7 @@ import {
   type UseFormReturn,
 } from "react-hook-form";
 import { type BaseSchema, type Output } from "valibot";
-import { type WithoutResolver } from "./helpers";
+import { type WithoutResolver } from "../helpers";
 
 export const createValibotForm = <TSchema extends BaseSchema>(
   schema: TSchema

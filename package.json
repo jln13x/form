@@ -1,6 +1,6 @@
 {
   "name": "@jlns/form",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "type": "module",
   "types": "./dist/index.d.ts",
@@ -9,9 +9,17 @@
     "url": "https://github.com/jln13x/form.git"
   },
   "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js"
+    "./zod": {
+      "types": "./dist/zod/index.d.ts",
+      "import": "./dist/zod/index.js"
+    },
+    "./valibot": {
+      "types": "./dist/valibot/index.d.ts",
+      "import": "./dist/valibot/index.js"
+    },
+    "./yup": {
+      "types": "./dist/yup/index.d.ts",
+      "import": "./dist/yup/index.js"
     },
     "./package.json": "./package.json"
   },

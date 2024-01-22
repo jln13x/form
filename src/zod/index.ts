@@ -6,7 +6,7 @@ import {
   type UseFormReturn,
 } from "react-hook-form";
 import { type TypeOf, type ZodSchema } from "zod";
-import { type WithoutResolver } from "./helpers";
+import { type WithoutResolver } from "../helpers";
 
 export const createZodForm = <TSchema extends ZodSchema>(schema: TSchema) => {
   const useFormHook = (props?: Omit<UseZodFormProps<TSchema>, "schema">) => {

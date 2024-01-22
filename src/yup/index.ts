@@ -6,7 +6,7 @@ import {
   type UseFormReturn,
 } from "react-hook-form";
 import * as yup from "yup";
-import { type WithoutResolver } from "./helpers";
+import { type WithoutResolver } from "../helpers";
 
 export const createYupForm = <TSchema extends yup.AnyObjectSchema>(
   schema: TSchema
