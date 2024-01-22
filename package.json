@@ -1,0 +1,35 @@
+{
+  "name": "@jlns/form",
+  "version": "0.0.0",
+  "license": "MIT",
+  "type": "module",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "bun-types": "latest",
+    "@changesets/cli": "^2.27.1",
+    "tsup": "^8.0.1"
+  },
+  "peerDependencies": {
+    "typescript": "^5.3.3",
+    "zod": "^3.22.4",
+    "react-hook-form": "^7.49.3",
+    "@hookform/resolvers": "^3.3.3",
+    "yup": "^1.3.3",
+    "valibot": "^0.26.0"
+  },
+  "scripts": {
+    "build": "tsup",
+    "cs": "changeset",
+    "pub": "bun run build && changeset version && changeset publish"
+  }
+}
