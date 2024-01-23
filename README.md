@@ -24,11 +24,12 @@ bun add @jlns/form
 
 ## Usage
 
-Create your Form Hooks
+Create your Form Hooks outside of React. This can even be some different file.
 
 ```ts
 import { createZodForm } from "@jlns/form/zod";
 
+// Destructure the form hooks and name them however you want
 const [useProfileForm, useProfileFormContext] = createZodForm(
   z.object({
     firstName: z.string(),
