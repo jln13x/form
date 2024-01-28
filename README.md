@@ -2,9 +2,11 @@
 
 > Typesafe forms without compromises or fancy abstractions. Built for react-hook-form and your favorite validation library.
 
-This library is a thin wrapper around react-hook-form and just extends it with awesome type safety.
+This library is a very thin wrapper around react-hook-form and just extends it with awesome type safety.
 
 Currently supported: [zod](https://github.com/colinhacks/zod), [valibot](https://github.com/fabian-hiller/valibot), [yup](https://github.com/jquense/yup)
+
+<img src="https://github.com/jln13x/form/blob/main/assets/jlns-form.png" />
 
 ## Installation
 
