@@ -2,13 +2,13 @@
 
 import { yupResolver } from "@hookform/resolvers/yup";
 import {
+  UseFormProps,
   useForm,
   useFormContext,
   type DeepPartialSkipArrayKey,
   type UseFormReturn,
 } from "react-hook-form";
 import * as yup from "yup";
-import { type WithoutResolver } from "../helpers";
 
 export const createYupForm = <TSchema extends yup.AnyObjectSchema>(
   schema: TSchema
@@ -30,8 +30,9 @@ type UseYupFormReturn<TSchema extends yup.AnyObjectSchema> = UseFormReturn<
   yup.InferType<TSchema>
 >;
 
-type UseYupFormProps<TSchema extends yup.AnyObjectSchema> = WithoutResolver<
-  yup.InferType<TSchema>
+type UseYupFormProps<TSchema extends yup.AnyObjectSchema> = Omit<
+  UseFormProps<yup.InferType<TSchema>>,
+  "resolver"
 > & {
   schema: TSchema;
 };

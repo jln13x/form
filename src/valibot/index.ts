@@ -2,13 +2,13 @@
 
 import { valibotResolver } from "@hookform/resolvers/valibot";
 import {
-  type DeepPartialSkipArrayKey,
   useForm,
   useFormContext,
+  type DeepPartialSkipArrayKey,
+  type UseFormProps,
   type UseFormReturn,
 } from "react-hook-form";
 import { type BaseSchema, type Output } from "valibot";
-import { type WithoutResolver } from "../helpers";
 
 export const createValibotForm = <TSchema extends BaseSchema>(
   schema: TSchema
@@ -32,8 +32,9 @@ type UseValibotFormReturn<TSchema extends BaseSchema> = UseFormReturn<
   Output<TSchema>
 >;
 
-type UseValibotFormProps<TSchema extends BaseSchema> = WithoutResolver<
-  Output<TSchema>
+type UseValibotFormProps<TSchema extends BaseSchema> = Omit<
+  UseFormProps<Output<TSchema>>,
+  "resolver"
 > & {
   schema: TSchema;
 };

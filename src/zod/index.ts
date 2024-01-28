@@ -2,13 +2,13 @@
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import {
+  UseFormProps,
   useForm,
   useFormContext,
   type DeepPartialSkipArrayKey,
   type UseFormReturn,
 } from "react-hook-form";
 import { type TypeOf, type ZodSchema } from "zod";
-import { type WithoutResolver } from "../helpers";
 
 export const createZodForm = <TSchema extends ZodSchema>(schema: TSchema) => {
   const useFormHook = (props?: Omit<UseZodFormProps<TSchema>, "schema">) => {
@@ -28,8 +28,9 @@ type UseZodFormReturn<TSchema extends ZodSchema> = UseFormReturn<
   TypeOf<TSchema>
 >;
 
-type UseZodFormProps<TSchema extends ZodSchema> = WithoutResolver<
-  TypeOf<TSchema>
+type UseZodFormProps<TSchema extends ZodSchema> = Omit<
+  UseFormProps<TypeOf<TSchema>>,
+  "resolver"
 > & {
   schema: TSchema;
 };
