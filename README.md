@@ -22,6 +22,8 @@ pnpm add @jlns/form
 bun add @jlns/form
 ```
 
+or just copy paste them into your project. You can find the [code here](https://github.com/jln13x/form/tree/main/src).
+
 ## Usage
 
 Create your Form Hooks outside of React. This can even be some different file.
