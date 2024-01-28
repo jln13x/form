@@ -155,4 +155,4 @@ import { createYupForm, useYupForm } from "@jlns/form/yup";
 <br />
 <br />
 
-The package was highly inspired by the [blog post](https://www.brendonovich.dev/blog/the-ultimate-form-abstraction) from [brendonovich](https://twitter.com/brendonovichdev) aswell as some implementation from [Julius](@jullerino).
+The package was highly inspired by the [blog post](https://www.brendonovich.dev/blog/the-ultimate-form-abstraction) from [brendonovich](https://x.com/brendonovichdev) aswell as some implementation from [Julius](https://x.com/jullerino).
